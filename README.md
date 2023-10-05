@@ -83,7 +83,6 @@ A request to the report endpoint returns the following JSON response:
      }
    }
    ```
-
 ## Project Setup 
 1. Follow the instructions on https://docs.docker.com/install/ to install docker
 2. Follow the instructions on https://docs.docker.com/compose/install/ to install docker compose
@@ -128,6 +127,7 @@ Unittests are added to test the functionality of both endpoints. While the docke
      - Enable user authentication for accessing the endpoints (such as JWT authentication)
      - Enable caching `payrollReport` such that if no new csv has been uploaded, then instead of processing payroll at runtime everytime, we can retrieve it from cache
      - Support CI/CD
+     - Add unittests for Django Models
    - What compromises did you have to make as a result of the time constraints of this challenge?
      - Was unable to unittests for all scenarios (for example, uploading csv with the same report ID as a previously uploaded file).
      - More comprehensive error handling could be implemented
